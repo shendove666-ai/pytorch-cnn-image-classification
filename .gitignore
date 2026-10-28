@@ -1,0 +1,33 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Dataset
+data/
+
+# Model checkpoints and raw experiment outputs
+outputs/*.pth
+outputs/*.pt
+outputs/*.log
+outputs/checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Pytest cache
+.pytest_cache/
+.coverage
+
+# Keep placeholder files
+!outputs/.gitkeep
+!reports/figures/.gitkeep

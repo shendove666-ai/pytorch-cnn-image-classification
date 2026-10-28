@@ -1,0 +1,15 @@
+project_name: "cifar10_cnn_study"
+seed: 42
+data:
+  data_dir: "./data"
+  val_split: 0.1
+  batch_size: 64
+  num_workers: 0
+  pin_memory: false
+training:
+  epochs: 15
+  learning_rate: 0.01
+  momentum: 0.9
+  weight_decay: 0.0005
+  save_dir: "./outputs"
+  figures_dir: "./reports/figures"
