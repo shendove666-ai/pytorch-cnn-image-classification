@@ -1,4 +1,4 @@
 exp_id,title,model_class,trainable_params,use_augmentation,seed,device,epochs_run,smoke_test,best_epoch,best_val_acc,test_acc,test_loss,macro_precision,macro_recall,macro_f1,training_time_sec
-exp_a_baseline,Experiment A: Baseline CNN (No Augmentation),BaselineCNN,1070794,False,42,cpu,5,False,5,0.7372,0.7291,0.796981,0.7258,0.7291,0.7263,285.997
-exp_b_augmented,Experiment B: Baseline CNN + Data Augmentation,BaselineCNN,1070794,True,42,cpu,5,False,5,0.69,0.7038,0.852313,0.7071,0.7038,0.6982,308.326
-exp_c_improved,Experiment C: Improved CNN + Data Augmentation,ImprovedCNN,620586,True,42,cpu,5,False,5,0.7128,0.7189,0.796874,0.7237,0.7189,0.7094,394.638
+exp_a_baseline,Experiment A: Baseline CNN (No Augmentation),BaselineCNN,1070794,False,42,cpu,5,False,5,0.7372,0.7291,0.796981,0.7258,0.7291,0.7263,318.442
+exp_b_augmented,Experiment B: Baseline CNN + Data Augmentation,BaselineCNN,1070794,True,42,cpu,5,False,5,0.69,0.7038,0.852313,0.7071,0.7038,0.6982,349.328
+exp_c_improved,Experiment C: Improved CNN + Data Augmentation,ImprovedCNN,620586,True,42,cpu,5,False,5,0.7128,0.7189,0.796874,0.7237,0.7189,0.7094,423.981
