@@ -112,11 +112,11 @@ Values are taken from `outputs/experiments_comparison.csv`.
   Experiment   Model                Params Augmentation     Epochs Best Val  Final Test     Macro F1   Runtime
                                                                     Acc (%)     Acc (%)                    (s)
   ------------ --------------- ----------- -------------- -------- -------- ----------- ------------ ---------
-  **Exp A**    `BaselineCNN`     1,070,794 No                    5    73.72   **72.91**   **0.7263**     286.0
+  **Exp A**    `BaselineCNN`     1,070,794 No                    5    73.72   **72.91**   **0.7263**     318.4
 
-  **Exp B**    `BaselineCNN`     1,070,794 Yes                   5    69.00       70.38       0.6982     308.3
+  **Exp B**    `BaselineCNN`     1,070,794 Yes                   5    69.00       70.38       0.6982     349.3
 
-  **Exp C**    `ImprovedCNN`       620,586 Yes                   5    71.28       71.89       0.7094     394.6
+  **Exp C**    `ImprovedCNN`       620,586 Yes                   5    71.28       71.89       0.7094     424.0
   ------------------------------------------------------------------------------------------------------------
 
 ### 8.1 Main observations
@@ -131,8 +131,8 @@ Values are taken from `outputs/experiments_comparison.csv`.
     parameters, approximately 42.0% fewer than the baseline's 1,070,794
     parameters. Its test accuracy was 71.89%, 1.02 percentage points
     below Experiment A.
--   **Runtime:** The recorded training time was about 286.0 s for A,
-    308.3 s for B, and 394.6 s for C on CPU. Runtime depends on hardware
+-   **Runtime:** The recorded training time was about 318.4 s for A,
+    349.3 s for B, and 424.0 s for C on CPU. Runtime depends on hardware
     and system load.
 
 ### 8.2 Limitations

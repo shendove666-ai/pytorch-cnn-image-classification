@@ -36,11 +36,11 @@ algorithm.
                                parameters                  validation   accuracy              precision   recall                time
                                                              accuracy                                                     
   ------------ ------------- ------------ -------------- ------------ ---------- ---------- ----------- -------- -------- ----------
-  A            BaselineCNN      1,070,794 No                   73.72%     72.91%   0.796981      0.7258   0.7291   0.7263    286.0 s
+  A            BaselineCNN      1,070,794 No                   73.72%     72.91%   0.796981      0.7258   0.7291   0.7263    318.4 s
 
-  B            BaselineCNN      1,070,794 Yes                  69.00%     70.38%   0.852313      0.7071   0.7038   0.6982    308.3 s
+  B            BaselineCNN      1,070,794 Yes                  69.00%     70.38%   0.852313      0.7071   0.7038   0.6982    349.3 s
 
-  C            ImprovedCNN        620,586 Yes                  71.28%     71.89%   0.796874      0.7237   0.7189   0.7094    394.6 s
+  C            ImprovedCNN        620,586 Yes                  71.28%     71.89%   0.796874      0.7237   0.7189   0.7094    424.0 s
   ----------------------------------------------------------------------------------------------------------------------------------
 
 Source: completed run output and `outputs/experiments_comparison.csv`.
@@ -71,8 +71,8 @@ in this run.
 
 ### 5.4 Runtime
 
-Recorded training time was approximately 286.0 seconds for A, 308.3
-seconds for B, and 394.6 seconds for C. The improved architecture took
+Recorded training time was approximately 318.4 seconds for A, 349.3
+seconds for B, and 424.0 seconds for C. The improved architecture took
 the longest in this CPU run. Runtime can vary with hardware, background
 workload, and software environment.
 
