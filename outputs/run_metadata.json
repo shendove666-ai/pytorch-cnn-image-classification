@@ -1,0 +1,36 @@
+{
+  "environment": {
+    "python_version": "3.13.17",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "torch_version": "2.6.0+cpu",
+    "torchvision_version": "0.21.0+cpu",
+    "numpy_version": "2.2.6",
+    "pandas_version": "2.2.3",
+    "matplotlib_version": "3.9.4",
+    "scikit_learn_version": "1.5.2",
+    "cuda_available": false,
+    "cuda_version": "N/A",
+    "active_device": "cpu",
+    "device_name": "CPU"
+  },
+  "config": {
+    "project_name": "cifar10_cnn_study",
+    "seed": 42,
+    "data": {
+      "data_dir": "./data",
+      "val_split": 0.1,
+      "batch_size": 64,
+      "num_workers": 0,
+      "pin_memory": false
+    },
+    "training": {
+      "epochs": 5,
+      "learning_rate": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "save_dir": "./outputs",
+      "figures_dir": "./reports/figures"
+    }
+  },
+  "smoke_test": false
+}

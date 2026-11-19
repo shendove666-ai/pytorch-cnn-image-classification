@@ -1,0 +1,15 @@
+# Core Deep Learning Framework (CPU compatible by default; install CUDA wheels via official PyTorch index if needed)
+torch>=2.6.0,<2.7.0
+torchvision>=0.21.0,<0.22.0
+
+# Data Manipulation and Scientific Computing
+numpy>=2.1.0,<2.3.0
+pandas>=2.0.0,<2.3.0
+scikit-learn>=1.3.0,<1.6.0
+
+# Visualization and Configuration
+matplotlib>=3.7.0,<3.10.0
+pyyaml>=6.0.1,<7.0.0
+
+# Testing
+pytest>=7.4.0,<9.0.0
