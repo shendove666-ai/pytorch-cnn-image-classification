@@ -1,6 +1,6 @@
 # Reproducible CNN Experiments on CIFAR-10
 
-A small, reproducible PyTorch study of two convolutional architectures and data augmentation on [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html). The aim is to demonstrate controlled model comparison, careful validation-based model selection, multi-seed evaluation, and error analysis—not to propose a new computer-vision method.
+I trained three CNN configurations on [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) to see how training-image augmentation and a redesigned model affect test accuracy across three random seeds. The aim is to demonstrate controlled model comparison, careful validation-based model selection, multi-seed evaluation, and error analysis—not to propose a new computer-vision method.
 
 ## Portfolio snapshot
 
@@ -33,6 +33,8 @@ Starting from an interpretable two-block CNN, this project asks:
 
 Both models output raw logits directly to `nn.CrossEntropyLoss`; no redundant Softmax layer is applied before the loss.
 
+For a given seed, A and B use the same data split. A’s training preview advances its sampler before epoch one, so the two runs begin with different batches.
+
 ## Main results
 
 Values below are the mean ± sample standard deviation across the three completed seeds. The raw per-seed results and the exact aggregate calculation are versioned in [`outputs/repeated/`](outputs/repeated/).
@@ -43,15 +45,17 @@ Values below are the mean ± sample standard deviation across the three complete
 | B — baseline + augmentation | 80.64% ± 0.61% | 80.01% ± 0.72% | 0.7982 ± 0.0084 | 32.3 min |
 | C — improved + augmentation | **83.33% ± 0.40%** | **82.58% ± 0.07%** | **0.8248 ± 0.0030** | 42.2 min |
 
-In this setup, B exceeds A by 4.97 percentage points on average, and C exceeds B by 2.57 points. C has about 42.0% fewer trainable parameters than A and B. Its very small three-seed test standard deviation (0.07 percentage points) is encouraging, but this remains a small educational experiment rather than a claim of general superiority.
+In this setup, B exceeds A by 4.97 percentage points on average, and C exceeds B by 2.57 points. The redesigned model reached 82.58% mean test accuracy and used 42% fewer trainable parameters. Its mean CPU training time was 42.2 minutes, compared with 29.8 minutes for the baseline. Its very small three-seed test standard deviation (0.07 percentage points) is encouraging, but this remains a small educational experiment rather than a claim of general superiority.
 
 ## Representative diagnostics
 
 The images below are the outputs from seed 42, labeled as a representative individual run rather than the aggregate result. All three seeds' numerical results appear in the versioned CSV files.
 
-| Training curves | Confusion matrix | Example predictions |
-| --- | --- | --- |
-| ![Seed 42 improved-model curves](reports/figures/repeated/seed_42/exp_c_improved_curves.png) | ![Seed 42 improved-model confusion matrix](reports/figures/repeated/seed_42/exp_c_improved_confusion_matrix.png) | ![Seed 42 improved-model predictions](reports/figures/repeated/seed_42/exp_c_improved_prediction_examples.png) |
+![Seed 42 improved-model confusion matrix](reports/figures/repeated/seed_42/exp_c_improved_confusion_matrix.png)
+
+Confusion matrix for condition C, seed 42. Use the class counts to see which categories the model confuses.
+
+[Training curves](reports/figures/repeated/seed_42/exp_c_improved_curves.png) · [Example predictions](reports/figures/repeated/seed_42/exp_c_improved_prediction_examples.png)
 
 ## Protocol and artifact boundaries
 
