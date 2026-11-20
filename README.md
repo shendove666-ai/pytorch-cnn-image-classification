@@ -4,7 +4,7 @@ I trained three CNN configurations on [CIFAR-10](https://www.cs.toronto.edu/~kri
 
 ## Portfolio snapshot
 
-Nine full training runs compare three conditions across seeds 41, 42, and 43. Mean held-out test accuracy rises from 75.04% for the baseline to 80.01% with augmentation and 82.58% for the improved architecture with augmentation. The recorded protocol, per-seed tables, and error plots make the comparison inspectable; the dataset and three-seed scope limit what can be generalized.
+Across nine 30-epoch CIFAR-10 runs using seeds 41, 42, and 43, checkpoints were selected by validation accuracy and then evaluated on the official held-out test set. Mean test accuracy was 75.04% for the baseline, 80.01% for the augmented baseline, and 82.58% for the redesigned model with augmentation. The baseline preview advanced its training sampler before epoch one, and the redesign changed several architectural choices together.
 
 ## Question
 
